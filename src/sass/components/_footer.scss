@@ -1,1 +1,44 @@
-// хедер
+.container__footer{
+    display: flex;
+    justify-content: space-between;
+    width: 1090px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.footer__list{
+    list-style: none;
+}
+
+.footer__input{
+    border-radius: 20px;
+background: rgb(215, 215, 215);
+padding: 10px 80px 10px 10px;
+border: none;
+}
+
+.footer__info{
+    color: rgb(0, 0, 0);
+font-family: Montserrat Alternates;
+font-size: 6px;
+font-weight: 400;
+line-height: 7px;
+letter-spacing: 0%;
+
+}
+
+.footer__link{
+    color: black;
+    text-decoration: none;
+}
+
+.footer__btn{
+    border-radius: 20px;
+margin-left: 36px;
+background: rgb(0, 0, 0);
+width: 107px;
+height: 35px;
+padding: 10px;
+color: white;
+border: none;
+}
