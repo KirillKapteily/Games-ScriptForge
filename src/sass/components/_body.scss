@@ -1,4 +1,8 @@
-// БОДІ
-body{
-    font-family: 'Montserrat Alternates', sans-serif;
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: $light-bg;
+  color: $light-text;
+  transition: background-color $transition, color $transition;
 }
