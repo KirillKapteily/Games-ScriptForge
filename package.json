@@ -13,7 +13,7 @@
     "sass": "^1.89.2",
     "vite": "^4.0.5"
   },
-  "author": "undefined",
+  "author": " ",
   "license": "ISC",
   "dependencies": {
     "body": "^5.1.0",
@@ -22,16 +22,5 @@
     "swiper": "^10.0.4",
     "vite-plugin-full-reload": "^1.0.5",
     "vite-plugin-html-inject": "^1.0.1"
-  },
-  "main": "vite.config.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KirillKapteily/Games-ScriptForge.git"
-  },
-  "keywords": [],
-  "bugs": {
-    "url": "https://github.com/KirillKapteily/Games-ScriptForge/issues"
-  },
-  "homepage": "https://github.com/KirillKapteily/Games-ScriptForge#readme",
-  "description": ""
+  }
 }
