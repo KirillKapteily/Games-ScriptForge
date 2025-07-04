@@ -1,1 +1,24 @@
-// КОНТ
+.num__inp{
+ padding: 10px 0px 10px 10px;
+ width: 120px;
+    border-radius: 20px;
+    border: none;
+    background: rgb(215, 215, 215);
+    box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.25);
+}
+
+.num__inp{
+   @extend .check__inp;
+}
+
+.num__search{
+    @extend .check__search;
+}
+
+.num__text{
+    @extend .checked__text;
+}
+
+.num__btn{
+    @extend .check__btn;
+}

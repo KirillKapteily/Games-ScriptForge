@@ -1,0 +1,69 @@
+.check__inp {
+    padding: 10px 45px 10px 10px;
+    border-radius: 20px;
+    border: none;
+    background: rgb(215, 215, 215);
+    box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.25);
+}
+
+.check__btn {
+    position: relative;
+    right: 30px;
+    border-radius: 0px 20px 20px 0px;
+    border: none;
+    padding: 6px 10px 10px 10px;
+
+    background: rgb(0, 0, 0);
+}
+
+.check__search {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    top: 2px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.check__title {
+    margin-top: 36px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0%;
+
+}
+
+.check__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 36px;
+    margin-bottom: 36px;
+}
+
+.check__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checked__text {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    margin-left: 149px;
+    font-size: 12px;
+font-weight: 400;
+line-height: 15px;
+letter-spacing: 0%;
+}
+
+.check__hr{
+    border: 1px solid rgb(0, 0, 0);
+    width: 536px;
+    height: 0px;
+}
