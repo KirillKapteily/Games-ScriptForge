@@ -14,14 +14,62 @@
     font-size: 12;
 }
 
-.circle_option{
+.circle_option_1{
     background-color: black;
+    border-radius: 360px;
+    width: 25px;
+    height: 25px;
     color: white;
-    border-radius: 100px;
-    width: 27px;
-    height: 30px;
     text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+    margin-left: 578px;
+
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.circle_option_2{
+    background-color: black;
+    border-radius: 360px;
+    width: 25px;
+    height: 25px;
+    color: white;
+    text-align: center;
+    margin-left: 615px;
+    margin-top: -40px;
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.circle_option_3{
+    background-color: black;
+    border-radius: 360px;
+    width: 25px;
+    height: 25px;
+    color: white;
+    text-align: center;
+    margin-left: 578px;
+
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.circle_option_4{
+    background-color: black;
+    border-radius: 360px;
+    width: 25px;
+    height: 25px;
+    color: white;
+    text-align: center;
+    margin-left: 615px;
+    margin-top: -40px;
+
+    &:hover{
+        cursor: pointer;
+    }
 }
