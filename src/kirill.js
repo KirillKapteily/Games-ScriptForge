@@ -22,3 +22,11 @@ let gameLogic = () => {
 }
 numBtn.addEventListener("click", gameLogic);
 
+//time calc
+// let numCalcInp = document.querySelector(".calc__time__inp");
+// let numCalcBtn = document.querySelector(".calc__time__btn")
+// let numCalcText = document.querySelector(".calc__time__text")
+
+// let calcTimeLogic = () => {
+//      let inputed = Number(numCalcInp.value);
+// }
