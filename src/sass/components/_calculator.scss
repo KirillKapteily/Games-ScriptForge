@@ -21,6 +21,9 @@
     width: 69px;
     list-style: none;
     flex-wrap: wrap;
+    flex-direction: column;
+    height: 60px;
+    margin-left: 578px;
 }
 
 .circle__option__1{
@@ -44,4 +47,9 @@ cursor: pointer;
 
 .circle__option__4{
     @extend .circle__option__1;
+}
+
+.calculator_promt{
+    margin-left: -808px;
+margin-bottom: -50px;
 }

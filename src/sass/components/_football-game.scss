@@ -1,14 +1,9 @@
-.section_football{
-    background-color: $section_football;
-border-width: 2px;
-border-color: black;
-    width: 720px;
-    height: 220px;
-    border-radius: 25px;
-    margin-left: 490px;
-
-    .image_football{
-        margin-top: 85px;
-        margin-left: 92px;
-    }
+.field {
+  width: 720px;
+  height: 220px;
+background-color: $section_football;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  border-radius: 25px;
 }
