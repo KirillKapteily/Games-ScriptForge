@@ -1,0 +1,1 @@
+let option_1 = document.querySelector("#circle_option_1");
