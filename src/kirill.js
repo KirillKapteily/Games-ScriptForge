@@ -23,13 +23,20 @@ let gameLogic = () => {
 numBtn.addEventListener("click", gameLogic);
 
 //time calc
-// let numCalcInp = document.querySelector(".calc__time__inp");
-// let numCalcBtn = document.querySelector(".calc__time__btn")
-// let numCalcText = document.querySelector(".calc__time__text")
+let numCalcInp = document.querySelector(".calc__time__inp");
+let numCalcBtn = document.querySelector(".calc__time__btn")
+let numCalcText = document.querySelector(".calc__time__text")
 
-// let calcTimeLogic = () => {
-//      let inputed = Number(numCalcInp.value);
-// }
+let calcTimeLogic = () => {
+     let inputed = Number(numCalcInp.value);
+     let hours = Math.floor(inputed / 60);
+     let other = hours % 60;
+     console.log(other);
+     numCalcText.textContent = `${other} `
+     
+}
+
+numCalcBtn.addEventListener("click", calcTimeLogic);
 
 //sps
 let spsItem1 = document.querySelector(".sps__item__1");
@@ -158,7 +165,7 @@ let checkedText = document.querySelector(".checked__text")
 
 let checkLogic = () => {
     let inputed = Number(checkInp.value);
-    if ((inputed % 4 === 0 && inputed % 100 !== 0)) {
+    if ((inputed % 4 === 0 && inputed % 100)) {
         console.log("youve born in intercalary year");
         checkedText.textContent = "Ви народилися у високосний рік!"
         spsResult.classList.remove("red")
@@ -172,3 +179,137 @@ let checkLogic = () => {
 }
 
 checkBtn.addEventListener("click", checkLogic);
+
+// enter 3 nums 
+
+
+//scientists
+let stsBtn1 = document.querySelector(".sts__btn__1");
+let stsBtn2 = document.querySelector(".sts__btn__2");
+let stsBtn3 = document.querySelector(".sts__btn__3");
+let stsBtn4 = document.querySelector(".sts__btn__4");
+let stsBtn5 = document.querySelector(".sts__btn__5");
+let stsBtn6 = document.querySelector(".sts__btn__6");
+let stsBtn7 = document.querySelector(".sts__btn__7");
+let stsBtn8 = document.querySelector(".sts__btn__8");
+let stsBtn9 = document.querySelector(".sts__btn__9");
+
+let stsContent1 = document.querySelector(".sts__content__1");
+let stsContent2 = document.querySelector(".sts__content__2");
+let stsContent3 = document.querySelector(".sts__content__3");
+let stsContent4 = document.querySelector(".sts__content__4");
+let stsContent5 = document.querySelector(".sts__content__5");
+let stsContent6 = document.querySelector(".sts__content__6");
+let stsContent7 = document.querySelector(".sts__content__7");
+let stsContent8 = document.querySelector(".sts__content__8");
+let stsContent9 = document.querySelector(".sts__content__9");
+let stsContent10 = document.querySelector(".sts__content__10");
+let stsContent11 = document.querySelector(".sts__content__11");
+let stsContent12 = document.querySelector(".sts__content__12");
+let stsContent13 = document.querySelector(".sts__content__13");
+
+const scientists = [ 
+    { 
+        name: "Albert", 
+        surname: "Einstein", 
+        born: 1879, 
+        dead: 1955, 
+        id: 1 
+    }, 
+    { 
+        name: "Isaac", 
+        surname: "Newton", 
+        born: 1643, 
+        dead: 1727, 
+        id: 2 
+    }, 
+    { 
+        name: "Galileo", 
+        surname: "Galilei", 
+        born: 1564, 
+        dead: 1642, 
+        id: 3 
+    }, 
+    { 
+        name: "Marie", 
+        surname: "Curie", 
+        born: 1867, 
+        dead: 1934, 
+        id: 4 
+    }, 
+    { 
+        name: "Johannes", 
+        surname: "Kepler", 
+        born: 1571, 
+        dead: 1630, 
+        id: 5 
+    }, 
+    { 
+        name: "Nicolaus", 
+        surname: "Copernicus", 
+        born: 1473, 
+        dead: 1543, 
+        id: 6 
+    }, 
+    { 
+        name: "Max", 
+        surname: "Planck", 
+        born: 1858, 
+        dead: 1947, 
+        id: 7 
+    }, 
+    { 
+        name: "Katherine", 
+        surname: "Blodgett", 
+        born: 1898, 
+        dead: 1979, 
+        id: 8 
+    }, 
+    { 
+        name: "Ada", 
+        surname: "Lovelace", 
+        born: 1815, 
+        dead: 1852, 
+        id: 9 
+    }, 
+    { 
+        name: "Sarah E.", 
+        surname: "Goode", 
+        born: 1855, 
+        dead: 1905, 
+        id: 10 
+    }, 
+    { 
+        name: "Lise", 
+        surname: "Meitner", 
+        born: 1878, 
+        dead: 1968, 
+        id: 11 
+    }, 
+    { 
+        name: "Hanna", 
+        surname: "Hammarström", 
+        born: 1829, 
+        dead: 1909, 
+        id: 12 
+    } 
+];
+
+let bornedIn19th = () => {
+
+}
+
+let sortedByAlphabet = () => {
+    // let sorted = scientists.sort((a, b) => a.name.localeCompare(b.name));
+    // console.log(sorted);
+}
+
+let foundBirthYearOfAlbert = () => {
+    const albert = scientists.find(searched => searched.name === "Albert" && searched.surname === "Einstein");
+    if (albert) {
+        console.log(albert.born);
+    }
+}
+
+
+stsBtn5.addEventListener("click", foundBirthYearOfAlbert);
