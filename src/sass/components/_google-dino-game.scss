@@ -1,1 +1,51 @@
-// КОНТ
+.game {
+  width: 600px;
+  height: 200px;
+  border: 2px solid #444;
+  margin: 50px auto;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+#dino {
+  width: 40px;
+  height: 40px;
+  background-color: green;
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+  border-radius: 5px;
+}
+
+#cactus {
+  width: 20px;
+  height: 40px;
+  background-color: red;
+  position: absolute;
+  bottom: 0;
+  left: 600px;
+}
+
+#score {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-weight: bold;
+}
+
+#startBtn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#startBtn:hover {
+  background-color: #45a049;
+}
