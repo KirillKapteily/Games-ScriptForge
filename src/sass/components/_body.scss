@@ -1,8 +1,16 @@
 
+body{
+ background: url("../../img/back.svg");
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.container{
+    margin: 0 auto;
+    width: 1090px;
+    background-color: rgb(255, 255, 255);
+
+
 body {
-  margin: 0;
   font-family: sans-serif;
-  background-color: $light-bg;
   color: $light-text;
-  transition: background-color $transition, color $transition;
 }
