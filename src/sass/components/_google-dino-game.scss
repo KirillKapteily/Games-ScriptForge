@@ -1,64 +1,51 @@
 .game {
   width: 600px;
   height: 200px;
-  border: 1px solid black;
-  margin: auto;
+  border: 2px solid #444;
+  margin: 50px auto;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
 }
 
 #dino {
-  width: 50px;
-  height: 50px;
-  background-image: url(../trex.png);
-  background-size: 50px 50px;
-  position: relative;
-  top: 150px;
-}
-
-.jump {
-  animation: jump 0.3s linear;
-}
-
-@keyframes jump {
-  0% {
-    top: 150px;
-  }
-
-  30% {
-    top: 130px;
-  }
-
-  50% {
-    top: 80px;
-  }
-
-  80% {
-    top: 130px;
-  }
-
-  100% {
-    top: 150px;
-  }
+  width: 40px;
+  height: 40px;
+  background-color: green;
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+  border-radius: 5px;
 }
 
 #cactus {
   width: 20px;
   height: 40px;
-  position: relative;
-  top: 110px;
-  left: 580px;
-
-  background-image: url(../cactus.png);
-  background-size: 20px 40px;
-
-  animation: block 1s infinite linear;
+  background-color: red;
+  position: absolute;
+  bottom: 0;
+  left: 600px;
 }
 
-@keyframes block {
-  0% {
-    left: 580px;
-  }
+#score {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-weight: bold;
+}
 
-  100% {
-    left: -20px;
-  }
+#startBtn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#startBtn:hover {
+  background-color: #45a049;
 }
