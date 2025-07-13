@@ -1,0 +1,28 @@
+
+.header-container{
+max-width: 1500px;
+margin-left: 430px;
+    nav{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 80px;
+        list-style: none;
+        font-weight: 600;
+    
+    
+        p{
+      font-family: "Montserrat Alternates", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+        }
+    }
+    
+}
+
+.h1-header_section{
+          font-family: "Montserrat Alternates", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+      text-align: center;
+}
+
