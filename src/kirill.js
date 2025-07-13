@@ -28,12 +28,12 @@ let numCalcBtn = document.querySelector(".calc__time__btn")
 let numCalcText = document.querySelector(".calc__time__text")
 
 let calcTimeLogic = () => {
-     let inputed = Number(numCalcInp.value);
-     let hours = Math.floor(inputed / 60);
-     let other = hours % 60;
-     console.log(other);
-     numCalcText.textContent = `${other} `
-     
+    let inputed = Number(numCalcInp.value);
+    let hours = Math.floor(inputed / 60);
+    let other = hours % 60;
+    console.log(other);
+    numCalcText.textContent = `${other} `
+
 }
 
 numCalcBtn.addEventListener("click", calcTimeLogic);
@@ -181,6 +181,31 @@ let checkLogic = () => {
 checkBtn.addEventListener("click", checkLogic);
 
 // enter 3 nums 
+let enterNumText = document.querySelector(".enter__numbers__text");
+
+let numInp1 = document.querySelector(".inp__1");
+let numInp2 = document.querySelector(".inp__2");
+let numInp3 = document.querySelector(".inp__3");
+
+let numLogic = () => {
+    let inputed1 = Number(numInp1.value);
+    let inputed2 = Number(numInp2.value);
+    let inputed3 = Number(numInp3.value);
+
+    if (inputed1 !== '' && inputed2 !== '' && inputed3 !== '') {
+        let num1 = Number(numInp1.value);
+        let num2 = Number(numInp2.value);
+        let num3 = Number(numInp3.value);
+
+        let max = Math.max(num1, num2, num3);
+
+        enterNumText.textContent = `Найбільше число, яке ви ввели - (${max})`
+    }
+}
+
+numInp1.addEventListener('input', numLogic);
+numInp2.addEventListener('input', numLogic);
+numInp3.addEventListener('input', numLogic);
 
 
 //scientists
@@ -208,91 +233,91 @@ let stsContent11 = document.querySelector(".sts__content__11");
 let stsContent12 = document.querySelector(".sts__content__12");
 let stsContent13 = document.querySelector(".sts__content__13");
 
-const scientists = [ 
-    { 
-        name: "Albert", 
-        surname: "Einstein", 
-        born: 1879, 
-        dead: 1955, 
-        id: 1 
-    }, 
-    { 
-        name: "Isaac", 
-        surname: "Newton", 
-        born: 1643, 
-        dead: 1727, 
-        id: 2 
-    }, 
-    { 
-        name: "Galileo", 
-        surname: "Galilei", 
-        born: 1564, 
-        dead: 1642, 
-        id: 3 
-    }, 
-    { 
-        name: "Marie", 
-        surname: "Curie", 
-        born: 1867, 
-        dead: 1934, 
-        id: 4 
-    }, 
-    { 
-        name: "Johannes", 
-        surname: "Kepler", 
-        born: 1571, 
-        dead: 1630, 
-        id: 5 
-    }, 
-    { 
-        name: "Nicolaus", 
-        surname: "Copernicus", 
-        born: 1473, 
-        dead: 1543, 
-        id: 6 
-    }, 
-    { 
-        name: "Max", 
-        surname: "Planck", 
-        born: 1858, 
-        dead: 1947, 
-        id: 7 
-    }, 
-    { 
-        name: "Katherine", 
-        surname: "Blodgett", 
-        born: 1898, 
-        dead: 1979, 
-        id: 8 
-    }, 
-    { 
-        name: "Ada", 
-        surname: "Lovelace", 
-        born: 1815, 
-        dead: 1852, 
-        id: 9 
-    }, 
-    { 
-        name: "Sarah E.", 
-        surname: "Goode", 
-        born: 1855, 
-        dead: 1905, 
-        id: 10 
-    }, 
-    { 
-        name: "Lise", 
-        surname: "Meitner", 
-        born: 1878, 
-        dead: 1968, 
-        id: 11 
-    }, 
-    { 
-        name: "Hanna", 
-        surname: "Hammarström", 
-        born: 1829, 
-        dead: 1909, 
-        id: 12 
-    } 
+const scientists = [
+    {
+        name: "Albert",
+        surname: "Einstein",
+        born: 1879,
+        dead: 1955,
+        id: 1
+    },
+    {
+        name: "Isaac",
+        surname: "Newton",
+        born: 1643,
+        dead: 1727,
+        id: 2
+    },
+    {
+        name: "Galileo",
+        surname: "Galilei",
+        born: 1564,
+        dead: 1642,
+        id: 3
+    },
+    {
+        name: "Marie",
+        surname: "Curie",
+        born: 1867,
+        dead: 1934,
+        id: 4
+    },
+    {
+        name: "Johannes",
+        surname: "Kepler",
+        born: 1571,
+        dead: 1630,
+        id: 5
+    },
+    {
+        name: "Nicolaus",
+        surname: "Copernicus",
+        born: 1473,
+        dead: 1543,
+        id: 6
+    },
+    {
+        name: "Max",
+        surname: "Planck",
+        born: 1858,
+        dead: 1947,
+        id: 7
+    },
+    {
+        name: "Katherine",
+        surname: "Blodgett",
+        born: 1898,
+        dead: 1979,
+        id: 8
+    },
+    {
+        name: "Ada",
+        surname: "Lovelace",
+        born: 1815,
+        dead: 1852,
+        id: 9
+    },
+    {
+        name: "Sarah E.",
+        surname: "Goode",
+        born: 1855,
+        dead: 1905,
+        id: 10
+    },
+    {
+        name: "Lise",
+        surname: "Meitner",
+        born: 1878,
+        dead: 1968,
+        id: 11
+    },
+    {
+        name: "Hanna",
+        surname: "Hammarström",
+        born: 1829,
+        dead: 1909,
+        id: 12
+    }
 ];
 
 let bornedIn19th = () => {
@@ -308,6 +333,9 @@ let foundBirthYearOfAlbert = () => {
     const albert = scientists.find(searched => searched.name === "Albert" && searched.surname === "Einstein");
     if (albert) {
         console.log(albert.born);
+    } else {
+        console.log("sww!");
+        
     }
 }
 
