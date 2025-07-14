@@ -18,12 +18,10 @@
 .option__math{
     display: flex;
     gap: 10px;
-    width: 69px;
+    max-width: 69px;
     list-style: none;
-    flex-wrap: wrap;
-    flex-direction: column;
     height: 60px;
-    margin-left: 578px;
+    margin-left: 350px;
 }
 
 .circle__option__1{
@@ -32,13 +30,13 @@ border-radius: 50%;
 color: white;
 border: none;
 box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.25);
-width: 27px;
-height: 25px;
 cursor: pointer;
 }
 
 .circle__option__2{
     @extend .circle__option__1;
+    margin-top: 50px;
+    margin-left: -50px;
 }
 
 .circle__option__3{
@@ -47,6 +45,8 @@ cursor: pointer;
 
 .circle__option__4{
     @extend .circle__option__1;
+        margin-top: 50px;
+    margin-left: -50px;
 }
 
 .calculator_promt{
@@ -66,7 +66,7 @@ margin-right: 38px;
 }
 
 .end_input{
-    margin-left: 1051px;
+    margin-left: 800px;
     margin-top: -80px;
 }
 
@@ -74,4 +74,9 @@ margin-right: 38px;
     margin-left: 800px;
     margin-top: -35px;
     margin-right: 38px;
+}
+
+.rechnen_zeichnen{
+    @extend .circle__option__1;
+    margin-top: -10px;
 }
