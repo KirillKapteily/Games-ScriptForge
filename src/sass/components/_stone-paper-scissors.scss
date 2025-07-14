@@ -69,3 +69,16 @@
     position: relative;
     left: 100px;
 }
+
+.sps__stone{
+    background-color: black;
+    border: none;
+}
+
+.sps__scissors{
+    @extend .sps__stone;
+}
+
+.sps__paper{
+    @extend .sps__stone;
+}
