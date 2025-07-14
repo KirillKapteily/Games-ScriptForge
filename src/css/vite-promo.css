@@ -28,14 +28,7 @@
   color: #213547;
 }
 
-.vite-promo .gradient {
-  display: inline-block;
-  background-image: linear-gradient(120deg, #bd34fe 30%, #41d1ff);
 
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-}
 
 .vite-promo .tagline {
   font-size: 1.5rem;

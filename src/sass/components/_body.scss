@@ -11,13 +11,9 @@ body{
 
 }
 body {
-  font-family: sans-serif;
   color: $light-text;
-
-  transition: background-color $transition, color $transition;
-  background-image: url(../background.png);
-  background-repeat: no-repeat;
   height: 1700px;
+  background-repeat: no-repeat;
 }
 
 .container{
