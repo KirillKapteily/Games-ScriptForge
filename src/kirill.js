@@ -219,6 +219,8 @@ let stsBtn7 = document.querySelector(".sts__btn__7");
 let stsBtn8 = document.querySelector(".sts__btn__8");
 let stsBtn9 = document.querySelector(".sts__btn__9");
 
+let stsItemContent = document.querySelector(".sts__item__content")
+
 let stsContent1 = document.querySelector(".sts__content__1");
 let stsContent2 = document.querySelector(".sts__content__2");
 let stsContent3 = document.querySelector(".sts__content__3");
@@ -321,23 +323,73 @@ const scientists = [
 ];
 
 let bornedIn19th = () => {
+    const nineth = scientists.filter(searched => searched.born >= 1800 && searched.born <= 1900);
 
+    nineth.forEach(element => {
+        console.log(element.name);
+    });
+}
+
+let sortByYearsOfLife = () => {
+    let sorted = scientists.slice().sort((a, b) => a.born - b.born);
+    let years = sorted.map(element => element.name)
+    console.log(years);
+}
+
+let findNamesThatStartsOnC = () => {
+    let filtered = scientists.filter(scientist => scientist.name.startsWith("S"));
+    let names = filtered.map(element => element.name);
+    console.log(names);
+}
+
+let delNamesThatStartsOnA = () => {
+    let filtered = scientists.filter(scientist => scientist.name.startsWith("A"));
+    let names = filtered.map(element => element.name);
+    console.log(names);
+    if (stsItemContent === names) {
+        stsItemContent.textContent = " "
+    }
+}
+
+let findSinetistThatBornedLate = () => {
+       let sorted = scientists.slice().sort((a, b) => a.born - b.born);
+    let last = sorted.map(element => element.name);
+
+    console.log(last[10]);
+}
+
+let findSinetistThatBornedLatestAndErlyest = () => {
+       let sorted = scientists.slice().sort((a, b) => a.born - b.born);
+    let last = sorted.map(element => element.name);
+
+    console.log(last[10]);
+      console.log(last[0]);
 }
 
 let sortedByAlphabet = () => {
-    // let sorted = scientists.sort((a, b) => a.name.localeCompare(b.name));
-    // console.log(sorted);
+    let sorted = scientists.slice().sort((a, b) => a.name.localeCompare(b.name));
+    let names = sorted.map(scientist => scientist.name + " " + scientist.surname);
+    console.log(names);
 }
 
 let foundBirthYearOfAlbert = () => {
     const albert = scientists.find(searched => searched.name === "Albert" && searched.surname === "Einstein");
     if (albert) {
         console.log(albert.born);
-    } else {
-        console.log("sww!");
-        
     }
 }
 
-
+let findSinetistestWithIdenticalFirstWord = () => {
+    let filteredNames = scientists.filter(started => started.name.startsWith("H") && started.surname.startsWith("H"));
+        let last = filteredNames.map(element => element.name);
+    console.log(last);
+}
+stsBtn1.addEventListener("click", bornedIn19th);
+stsBtn2.addEventListener("click", sortedByAlphabet);
+stsBtn3.addEventListener("click", sortByYearsOfLife);
+stsBtn4.addEventListener("click", findSinetistThatBornedLate);
 stsBtn5.addEventListener("click", foundBirthYearOfAlbert);
+stsBtn6.addEventListener("click", findNamesThatStartsOnC);
+stsBtn7.addEventListener("click", delNamesThatStartsOnA);
+stsBtn8.addEventListener("click", findSinetistThatBornedLatestAndErlyest);
+stsBtn9.addEventListener("click", findSinetistestWithIdenticalFirstWord);
