@@ -4,24 +4,15 @@
     </div>
     <div>
     </div>
-    <div class="check__form calculator_promt">
-        <input type="text" class="check__inp" placeholder="Введіть число"> 
-    </div>
 </section>
-<section>
-<ul class="option__math">
-    <li class="circle_option"><button type="button" class="circle__option__1" id="circle__option__1">+</button></li>
-    <li class="circle_option"><button type="button" class="circle__option__2" id="circle__option__2">-</button></li> 
-    <li class="circle_option"><button type="button" class="circle__option__3" id="circle__option__3">*</button></li>
-    <li class="circle_option"><button type="button" class="circle__option__4" id="circle__option__4">/</button></li>
-</ul>
-</section>
-<section class="second_input check__container calculator_first_input">
-        <div class="check__form calculator_promt second_input_calculator">
-        <input type="text" class="check__inp" placeholder="Введіть число"> 
-    </div>
-        <li class="circle_option end_input"><button type="button" class="circle__option__4">=</button></li>
-                <div class="check__form calculator_promt third_input_calculator">
-        <input type="text" class="check__inp" placeholder="Результат"> 
-    </div>
-</section>
+  <input class="num_inp" type="number" id="num1" placeholder="First number">
+  <select id="operator">
+    <option value="+">+</option>
+    <option value="-">−</option>
+    <option value="*">×</option>
+    <option value="/">÷</option>
+  </select>
+  <input type="number" id="num2" placeholder="Second number">
+  <button class="rechnen_zeichnen" onclick="calculate()">=</button>
+
+  <h3 class="third_input_calculator">Result: <span id="result">?</span></h3>
