@@ -1,29 +1,40 @@
-.game {
-  width: 100%;
-  height: 300px;
-  background: #a0d468;
-  border-bottom: 4px solid #3e8e41;
-  position: relative;
-  overflow: hidden;
-}
+    #game {
+      position: relative;
+      width: 600px;
+      height: 200px;
+      margin: 20px auto;
+      background: #fff;
+      border: 2px solid #000;
+      overflow: hidden;
+    }
 
-#dino {
-  position: absolute;
-  width: 60px;
-  bottom: 0;
-  left: 50px;
-  transition: bottom 0.2s;
-}
+    #dino {
+      position: absolute;
+      bottom: 0;
+      left: 50px;
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+    }
 
-#cactus {
-  position: absolute;
-  width: 40px;
-  bottom: 0;
-  right: -60px;
-  animation: moveCactus 2s linear infinite;
-}
+    #cactus {
+      position: absolute;
+      bottom: 0;
+      left: 600px;
+      width: 50px;
+      height: 50px;
+    }
 
-@keyframes moveCactus {
-  0% { right: -60px; }
-  100% { right: 100%; }
-}
+    #startBtn {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    #gameOver {
+      font-size: 22px;
+      color: red;
+      display: none;
+      margin-top: 10px;
+    }
