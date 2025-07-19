@@ -327,6 +327,13 @@ let bornedIn19th = () => {
 
     nineth.forEach(element => {
         console.log(element.name);
+        document.querySelectorAll('.sts__item__content').forEach(item => {
+            nineth.forEach(scientist => {
+                if (item.textContent.includes(scientist.name)) {
+                    item.classList.add("green");
+                }
+            });
+        });
     });
 }
 
@@ -340,30 +347,45 @@ let findNamesThatStartsOnC = () => {
     let filtered = scientists.filter(scientist => scientist.name.startsWith("S"));
     let names = filtered.map(element => element.name);
     console.log(names);
+    document.querySelectorAll('.sts__item__content').forEach(item => {
+        if (item.textContent.startsWith("S")) {
+            item.classList.add("green");
+        }
+    });
 }
 
 let delNamesThatStartsOnA = () => {
     let filtered = scientists.filter(scientist => scientist.name.startsWith("A"));
     let names = filtered.map(element => element.name);
-    console.log(names);
-    if (stsItemContent === names) {
-        stsItemContent.textContent = " "
-    }
+    document.querySelectorAll('.sts__item__content').forEach(item => {
+        if (item.textContent.startsWith("A")) {
+            item.classList.add("red");
+        }
+    });
+    // console.log(names);
 }
 
 let findSinetistThatBornedLate = () => {
-       let sorted = scientists.slice().sort((a, b) => a.born - b.born);
+    let sorted = scientists.slice().sort((a, b) => a.born - b.born);
     let last = sorted.map(element => element.name);
-
+    stsItemContent.classList.add("green");
     console.log(last[10]);
 }
 
 let findSinetistThatBornedLatestAndErlyest = () => {
-       let sorted = scientists.slice().sort((a, b) => a.born - b.born);
+    let sorted = scientists.slice().sort((a, b) => a.born - b.born);
     let last = sorted.map(element => element.name);
-
+    document.querySelectorAll('.sts__item__content').forEach(item => {
+        last.forEach(() => {
+            if (item.textContent.includes(last[0]) || item.textContent.includes(last[10])) {
+                item.classList.add("green");
+            }
+        });
+    });
     console.log(last[10]);
-      console.log(last[0]);
+    console.log(last[0]);
+
+
 }
 
 let sortedByAlphabet = () => {
@@ -376,12 +398,13 @@ let foundBirthYearOfAlbert = () => {
     const albert = scientists.find(searched => searched.name === "Albert" && searched.surname === "Einstein");
     if (albert) {
         console.log(albert.born);
+        stsItemContent.classList.add("green");
     }
 }
 
 let findSinetistestWithIdenticalFirstWord = () => {
     let filteredNames = scientists.filter(started => started.name.startsWith("H") && started.surname.startsWith("H"));
-        let last = filteredNames.map(element => element.name);
+    let last = filteredNames.map(element => element.name);
     console.log(last);
 }
 stsBtn1.addEventListener("click", bornedIn19th);
