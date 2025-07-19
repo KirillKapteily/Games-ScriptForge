@@ -1,13 +1,14 @@
   window.onload = function() {
-    const modal = document.querySelector(".modal")
+    const modal = document.querySelector(".modal");
     const closeBtn = document.querySelector(".close");
-    let input_welcome = document.querySelector("welcome_input");
-    let username = document.querySelector(".user_name")
+    const submitBtn = document.querySelector(".button_modal");
+    const nameInput = document.querySelector(".welcome_input");
+    const welcomeMessage = document.querySelector(".user_name");
 
+    // Show modal on page load
     modal.style.display = "block";
 
-    welcome_input.textContent = username.textContent
-
+    // Close modal
     closeBtn.onclick = function() {
       modal.style.display = "none";
     };
@@ -17,7 +18,15 @@
         modal.style.display = "none";
       }
     };
-  };
 
-  // let promptText = prompt("What's your name?");
-// document.querySelector('.user_name').textContent = promptText;
+    // Submit name
+    submitBtn.onclick = function() {
+      const name = nameInput.value.trim();
+      if (name) {
+        welcomeMessage.textContent = `${name}`;
+        modal.style.display = "none";
+      } else {
+        alert("Please enter your name!");
+      }
+    };
+  };
