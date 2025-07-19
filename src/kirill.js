@@ -31,8 +31,14 @@ let calcTimeLogic = () => {
     let inputed = Number(numCalcInp.value);
     let hours = Math.floor(inputed / 60);
     let other = hours % 60;
-    console.log(other);
-    numCalcText.textContent = `${other} `
+    let mins = inputed % 60;
+
+    if (isNaN(inputed)) {
+        alert("Введіть число");
+        return;
+    }
+
+    numCalcText.textContent = `${other}годин ${mins}хвилин`;
 
 }
 
@@ -209,6 +215,8 @@ numInp3.addEventListener('input', numLogic);
 
 
 //scientists
+let stsList = document.querySelector(".sts__list");
+
 let stsBtn1 = document.querySelector(".sts__btn__1");
 let stsBtn2 = document.querySelector(".sts__btn__2");
 let stsBtn3 = document.querySelector(".sts__btn__3");
@@ -339,7 +347,16 @@ let bornedIn19th = () => {
 
 let sortByYearsOfLife = () => {
     let sorted = scientists.slice().sort((a, b) => a.born - b.born);
-    let years = sorted.map(element => element.name)
+    let years = sorted.map(element => element.name);
+     stsList.innerHTML = '';
+    years.forEach(year => {
+        const liC = document.createElement('li');
+        const Divid = document.createElement('div');
+        Divid.classList.add("sts__item__content");
+        Divid.textContent = year;
+        liC.appendChild(Divid);
+        stsList.appendChild(liC);
+    });
     console.log(years);
 }
 
@@ -359,7 +376,8 @@ let delNamesThatStartsOnA = () => {
     let names = filtered.map(element => element.name);
     document.querySelectorAll('.sts__item__content').forEach(item => {
         if (item.textContent.startsWith("A")) {
-            item.classList.add("red");
+            item.classList.add("none");
+
         }
     });
     // console.log(names);
@@ -392,6 +410,15 @@ let sortedByAlphabet = () => {
     let sorted = scientists.slice().sort((a, b) => a.name.localeCompare(b.name));
     let names = sorted.map(scientist => scientist.name + " " + scientist.surname);
     console.log(names);
+    stsList.innerHTML = '';
+    names.forEach(name => {
+        const liC = document.createElement('li');
+        const Divid = document.createElement('div');
+        Divid.classList.add("sts__item__content");
+        Divid.textContent = name;
+        liC.appendChild(Divid);
+        stsList.appendChild(liC);
+    });
 }
 
 let foundBirthYearOfAlbert = () => {
@@ -405,6 +432,11 @@ let foundBirthYearOfAlbert = () => {
 let findSinetistestWithIdenticalFirstWord = () => {
     let filteredNames = scientists.filter(started => started.name.startsWith("H") && started.surname.startsWith("H"));
     let last = filteredNames.map(element => element.name);
+     document.querySelectorAll('.sts__item__content').forEach(item => {
+        if (item.textContent.startsWith("H")&& item.textContent.startsWith("H")) {
+            item.classList.add("green");
+        }
+    });
     console.log(last);
 }
 stsBtn1.addEventListener("click", bornedIn19th);
