@@ -53,6 +53,8 @@ let spsStoneBtn = document.querySelector(".sps__stone");
 let spsScissosBtn = document.querySelector(".sps__scissors");
 let spsPaperBtn = document.querySelector(".sps__paper");
 let spsResult = document.querySelector(".sps__result");
+let compScore = document.querySelector(".num__score__comp");
+let userScore = document.querySelector(".num__score__user");
 // let numCalcText = document.querySelector(".calc__time__text")
 
 let sps = [
@@ -67,6 +69,7 @@ let sps = [
     }
 ];
 
+
 let spsStoneLogic = () => {
     let responseNum = Math.floor(Math.random() * 3);
     let response = sps[responseNum].name;
@@ -77,6 +80,7 @@ let spsStoneLogic = () => {
         console.log("you lose!");
         spsResult.classList.remove("green")
         spsResult.classList.add("red")
+        compScore.textContent = Number(compScore.textContent) + 1;
         spsResult.textContent = `Комп’ютер виграв раунд!`
     } else if (response === "stone") {
         console.log("draw!");
@@ -85,6 +89,7 @@ let spsStoneLogic = () => {
         spsResult.textContent = `Нічья`
     } else if (response === "scissors") {
         console.log("you win!");
+        userScore.textContent = Number(userScore.textContent) + 1;
         spsResult.classList.remove("red")
         spsResult.classList.add("green")
         spsResult.textContent = `Ви виграли раунд!`
@@ -101,6 +106,7 @@ let spsScissosLogic = () => {
         console.log("you won!");
         spsResult.classList.remove("red")
         spsResult.classList.add("green")
+        userScore.textContent = Number(userScore.textContent) + 1;
         spsResult.textContent = `Ви виграли раунд!`
     } else if (response === "Scissos") {
         console.log("draw!");
@@ -109,6 +115,7 @@ let spsScissosLogic = () => {
         spsResult.textContent = `Нічья`
     } else if (response === "stone") {
         console.log("you lose!");
+        compScore.textContent = Number(compScore.textContent) + 1;
         spsResult.classList.remove("green")
         spsResult.classList.add("red")
         spsResult.textContent = `Комп’ютер виграв раунд!`
@@ -128,11 +135,13 @@ let spsPaperLogic = () => {
         spsResult.textContent = `Нічья`
     } else if (response === "Scissos") {
         console.log("you lose!");
+        compScore.textContent = Number(compScore.textContent) + 1;
         spsResult.classList.remove("green")
         spsResult.classList.add("red")
         spsResult.textContent = `Комп’ютер виграв раунд!`
     } else if (response === "stone") {
         console.log("you won!");
+        userScore.textContent = Number(userScore.textContent) + 1;
         spsResult.classList.remove("red")
         spsResult.classList.add("green")
         spsResult.textContent = `Ви виграли раунд!`
@@ -348,7 +357,7 @@ let bornedIn19th = () => {
 let sortByYearsOfLife = () => {
     let sorted = scientists.slice().sort((a, b) => a.born - b.born);
     let years = sorted.map(element => element.name);
-     stsList.innerHTML = '';
+    stsList.innerHTML = '';
     years.forEach(year => {
         const liC = document.createElement('li');
         const Divid = document.createElement('div');
@@ -432,8 +441,8 @@ let foundBirthYearOfAlbert = () => {
 let findSinetistestWithIdenticalFirstWord = () => {
     let filteredNames = scientists.filter(started => started.name.startsWith("H") && started.surname.startsWith("H"));
     let last = filteredNames.map(element => element.name);
-     document.querySelectorAll('.sts__item__content').forEach(item => {
-        if (item.textContent.startsWith("H")&& item.textContent.startsWith("H")) {
+    document.querySelectorAll('.sts__item__content').forEach(item => {
+        if (item.textContent.startsWith("H") && item.textContent.startsWith("H")) {
             item.classList.add("green");
         }
     });
