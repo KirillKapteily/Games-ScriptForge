@@ -31,8 +31,14 @@ let calcTimeLogic = () => {
     let inputed = Number(numCalcInp.value);
     let hours = Math.floor(inputed / 60);
     let other = hours % 60;
-    console.log(other);
-    numCalcText.textContent = `${other} `
+    let mins = inputed % 60;
+
+    if (isNaN(inputed)) {
+        alert("Введіть число");
+        return;
+    }
+
+    numCalcText.textContent = `${other}годин ${mins}хвилин`;
 
 }
 
@@ -47,6 +53,8 @@ let spsStoneBtn = document.querySelector(".sps__stone");
 let spsScissosBtn = document.querySelector(".sps__scissors");
 let spsPaperBtn = document.querySelector(".sps__paper");
 let spsResult = document.querySelector(".sps__result");
+let compScore = document.querySelector(".num__score__comp");
+let userScore = document.querySelector(".num__score__user");
 // let numCalcText = document.querySelector(".calc__time__text")
 
 let sps = [
@@ -61,6 +69,7 @@ let sps = [
     }
 ];
 
+
 let spsStoneLogic = () => {
     let responseNum = Math.floor(Math.random() * 3);
     let response = sps[responseNum].name;
@@ -71,6 +80,7 @@ let spsStoneLogic = () => {
         console.log("you lose!");
         spsResult.classList.remove("green")
         spsResult.classList.add("red")
+        compScore.textContent = Number(compScore.textContent) + 1;
         spsResult.textContent = `Комп’ютер виграв раунд!`
     } else if (response === "stone") {
         console.log("draw!");
@@ -79,6 +89,7 @@ let spsStoneLogic = () => {
         spsResult.textContent = `Нічья`
     } else if (response === "scissors") {
         console.log("you win!");
+        userScore.textContent = Number(userScore.textContent) + 1;
         spsResult.classList.remove("red")
         spsResult.classList.add("green")
         spsResult.textContent = `Ви виграли раунд!`
@@ -95,6 +106,7 @@ let spsScissosLogic = () => {
         console.log("you won!");
         spsResult.classList.remove("red")
         spsResult.classList.add("green")
+        userScore.textContent = Number(userScore.textContent) + 1;
         spsResult.textContent = `Ви виграли раунд!`
     } else if (response === "Scissos") {
         console.log("draw!");
@@ -103,6 +115,7 @@ let spsScissosLogic = () => {
         spsResult.textContent = `Нічья`
     } else if (response === "stone") {
         console.log("you lose!");
+        compScore.textContent = Number(compScore.textContent) + 1;
         spsResult.classList.remove("green")
         spsResult.classList.add("red")
         spsResult.textContent = `Комп’ютер виграв раунд!`
@@ -122,11 +135,13 @@ let spsPaperLogic = () => {
         spsResult.textContent = `Нічья`
     } else if (response === "Scissos") {
         console.log("you lose!");
+        compScore.textContent = Number(compScore.textContent) + 1;
         spsResult.classList.remove("green")
         spsResult.classList.add("red")
         spsResult.textContent = `Комп’ютер виграв раунд!`
     } else if (response === "stone") {
         console.log("you won!");
+        userScore.textContent = Number(userScore.textContent) + 1;
         spsResult.classList.remove("red")
         spsResult.classList.add("green")
         spsResult.textContent = `Ви виграли раунд!`
@@ -209,6 +224,8 @@ numInp3.addEventListener('input', numLogic);
 
 
 //scientists
+let stsList = document.querySelector(".sts__list");
+
 let stsBtn1 = document.querySelector(".sts__btn__1");
 let stsBtn2 = document.querySelector(".sts__btn__2");
 let stsBtn3 = document.querySelector(".sts__btn__3");
@@ -339,7 +356,16 @@ let bornedIn19th = () => {
 
 let sortByYearsOfLife = () => {
     let sorted = scientists.slice().sort((a, b) => a.born - b.born);
-    let years = sorted.map(element => element.name)
+    let years = sorted.map(element => element.name);
+    stsList.innerHTML = '';
+    years.forEach(year => {
+        const liC = document.createElement('li');
+        const Divid = document.createElement('div');
+        Divid.classList.add("sts__item__content");
+        Divid.textContent = year;
+        liC.appendChild(Divid);
+        stsList.appendChild(liC);
+    });
     console.log(years);
 }
 
@@ -359,7 +385,8 @@ let delNamesThatStartsOnA = () => {
     let names = filtered.map(element => element.name);
     document.querySelectorAll('.sts__item__content').forEach(item => {
         if (item.textContent.startsWith("A")) {
-            item.classList.add("red");
+            item.classList.add("none");
+
         }
     });
     // console.log(names);
@@ -392,6 +419,15 @@ let sortedByAlphabet = () => {
     let sorted = scientists.slice().sort((a, b) => a.name.localeCompare(b.name));
     let names = sorted.map(scientist => scientist.name + " " + scientist.surname);
     console.log(names);
+    stsList.innerHTML = '';
+    names.forEach(name => {
+        const liC = document.createElement('li');
+        const Divid = document.createElement('div');
+        Divid.classList.add("sts__item__content");
+        Divid.textContent = name;
+        liC.appendChild(Divid);
+        stsList.appendChild(liC);
+    });
 }
 
 let foundBirthYearOfAlbert = () => {
@@ -405,6 +441,11 @@ let foundBirthYearOfAlbert = () => {
 let findSinetistestWithIdenticalFirstWord = () => {
     let filteredNames = scientists.filter(started => started.name.startsWith("H") && started.surname.startsWith("H"));
     let last = filteredNames.map(element => element.name);
+    document.querySelectorAll('.sts__item__content').forEach(item => {
+        if (item.textContent.startsWith("H") && item.textContent.startsWith("H")) {
+            item.classList.add("green");
+        }
+    });
     console.log(last);
 }
 stsBtn1.addEventListener("click", bornedIn19th);
