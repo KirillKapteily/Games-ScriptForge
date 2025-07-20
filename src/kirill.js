@@ -370,11 +370,11 @@ let sortByYearsOfLife = () => {
 }
 
 let findNamesThatStartsOnC = () => {
-    let filtered = scientists.filter(scientist => scientist.name.startsWith("S"));
-    let names = filtered.map(element => element.name);
-    console.log(names);
+    let filtered = scientists.filter(scientist => scientist.surname.startsWith("C"));
+    let surnames = filtered.map(element => element.surname);
+    console.log(surnames);
     document.querySelectorAll('.sts__item__content').forEach(item => {
-        if (item.textContent.startsWith("S")) {
+        if (item.textContent.includes("C")) {
             item.classList.add("green");
         }
     });

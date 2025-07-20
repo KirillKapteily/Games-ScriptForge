@@ -3,10 +3,12 @@
     justify-content: space-between;
     width: 1090px;
     margin: 0 auto;
+            font-family: "Montserrat Alternates", sans-serif;
     align-items: center;
 }
 
 .footer__list {
+            font-family: "Montserrat Alternates", sans-serif;
     list-style: none;
 }
 
@@ -15,6 +17,7 @@
     background: rgb(215, 215, 215);
     padding: 10px 80px 10px 10px;
     border: none;
+            font-family: "Montserrat Alternates", sans-serif;
 }
 
 .footer__info {
@@ -67,6 +70,10 @@
     align-items: center;
     position: relative;
     top: 30px;
+}
+
+.footer{
+        font-family: "Montserrat Alternates", sans-serif;
 }
 
 .backdrop {
