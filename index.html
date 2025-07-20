@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/Games-ScriptForge/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet">
+    <title>Vanilla App Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script type="module" crossorigin src="/Games-ScriptForge/assets/index-b281fa94.js"></script>
+    <link rel="stylesheet" href="/Games-ScriptForge/assets/index-30fd2842.css">
+  </head>
+  <body>
+    <div class="container">
+            <div class="modal">
+    <div class="container_modal">
+        <img class="welcome_image close" src="../img/vovasimages/cross.svg" alt="cross">
+        <p class="p_modal">Привіт! <br>
+    Ви потрапили на сайт інтерактивних ігор та завдань
+    Надіємось, що вам сподобається і ви отримаєте позитивні емоції!
+    Бажаємо Вам гарно провести час!</p>
+    <p>Введіть своє ім’я:</p>
+    <input class="welcome_input" type="text" name="" id="" placeholder="Ваше ім’я...">
+    <button class="button_modal">Зберегти</button>
+    </div>
+</div>
+      <div class="header-container">
+    <nav>
+        <img src="../img/Logo.svg" alt="Logo">
+        <li>
+            <p>Інтерактив</p>
+        </li>
+        <li>
+            <p>Наша команда</p>
+        </li>
+        <li>
+            <p>Контакти</p>
+        </li>
+        <li>
+            <p>Вітаємо, <span class="user_name">User</span>!</p>
+        </li>
+    </nav>
+</div>
+<section>
+    <h1 class="h1-header_section">Популярні інетрактивні ігри</h1>
+    <hr width="1400">
+</section>
+  <section>
+    <div class="container">
+        <h3 class="check__title">Перевір в який рік ти народився</h3>
+        <div class="check__wrapper">
+             <form class="check__form">
+            <input type="text" class="check__inp" placeholder="Введіть рік народження"> <button class="check__btn" type="button"><svg
+                    class="check__search" width="15" height="15">
+                    <use href="../img/kirillsimgaes/symbol-defs.svg#icon-search"></use>
+                </svg></button>
+        </form>
+        <p class="checked__text">placeholder</p> 
+        </div>
+        <hr class="check__hr">
+    </div>
+</section>
+  <section>
+    <div class="container">
+        <h3 class="check__title">Вгадай число, яке загадав комп’ютер</h3>
+        <div class="check__wrapper">
+             <form class="check__form">
+            <input type="text" class="num__inp" placeholder="Введіть число"> <button class="num__btn" type="button"><svg
+                    class="num__search" width="15" height="15">
+                    <use href="../img/kirillsimgaes/symbol-defs.svg#icon-search"></use>
+                </svg></button>
+        </form>
+        <p class="num__text">placeholder</p> 
+        </div>
+        <hr class="check__hr">
+    </div>
+</section>
+  <section>
+    <div class="container">
+        <h3 class="sps__title">Камінь - ножиці - папір</h3>
+        <div class="sps__wrapper">
+            <ul class="sps__list">
+                <li class="sps__item sps__item__1"><button type="button" class="sps__stone"><img src="../img/kirillsimgaes/stone.svg" alt="stone"></button></li>
+                <li class="sps__item sps__item__2"><button type="button" class="sps__scissors"><img src="../img/kirillsimgaes/scissors.svg" alt="scissors"></button></li>
+                <li class="sps__item sps__item__3"><button type="button" class="sps__paper"><img src="../img/kirillsimgaes/paper.svg" alt="paper"></button></li>
+            </ul>
+            <ul class="sps__win__list">
+                <li class="sps__win__item">Рахунок: </li>
+                <li class="sps__win__item">Комп’ютер - <span class="num__score__comp">0</span></li>
+                <li class="sps__win__item">Ви - <span class="num__score__user">0</span></li>
+            </ul>
+        </div>
+        <p class="sps__result">placeholder</p>
+        <button type="button" class="sps__btn">Варіант комп’ютера</button>
+
+        <hr class="check__hr">
+    </div>
+</section>
+  <section class="check__container calculator_first_input">
+    <div>
+        <p class="p_title">Калькулятор</p>
+    </div>
+    <div>
+    </div>
+</section>
+  <input class="num_inp" type="number" id="num1" placeholder="First number">
+  <select id="operator">
+    <option value="+">+</option>
+    <option value="-">−</option>
+    <option value="*">×</option>
+    <option value="/">÷</option>
+  </select>
+  <input type="number" id="num2" placeholder="Second number">
+  <button class="rechnen_zeichnen" onclick="calculate()">=</button>
+
+  <h3 class="third_input_calculator">Result: <span id="result">?</span></h3>
+
+  <section>
+    <div class="container">
+        <h3 class="calc__time__title">Калькулятор часу</h3>
+        <div class="calc__time__wrapper">
+<form class="calc__time__form">
+            <input type="text" class="calc__time__inp" placeholder="Введіть число"> <button type="button" class="calc__time__btn"><svg
+                    class="calc__time__search" width="15" height="15">
+                    <use href="../img/kirillsimgaes/symbol-defs.svg#icon-search"></use>
+                </svg></button>
+        </form>
+        <div class="calc__time__doted"></div>
+        <p class="calc__time__text">placeholder</p>
+        </div>
+     <hr class="check__hr">
+    </div>
+</section>
+  <p class="p_title">Google динозавр</p>
+  <div id="game">
+    <div id="dino"><img src="../sass/trex.png" alt="" width="50" height="50"></div>
+    <div id="cactus"><img src="../sass/cactus.png" alt="" width="50" height="50"></div>
+  </div>
+
+  <button id="startBtn">Start Game</button>
+  <div id="gameOver">Game Over!</div>
+  <h3 class="p_title">Футбол</h3>
+  <div id="field">
+    <div id="ball"><img src="../img/vovasimages/football.svg" alt=""></div>
+  </div>
+  <section>
+    <div class="container">
+        <h3 class="enter__numbers__title">Введіть 3 числа</h3>
+        <div class="enter__numbers__wrapper">
+            <form class="enter__numbers__form">
+                <input type="text" class="enter__numbers__inp inp__1" placeholder="Введіть число"> 
+                   <input type="text" class="enter__numbers__inp inp__2" placeholder="Введіть число"> 
+                      <input type="text" class="enter__numbers__inp inp__3" placeholder="Введіть число"> 
+            </form>
+            <p class="enter__numbers__text">Найбільше число, яке ви ввели - (число)</p>
+        </div>
+        <hr class="check__hr">
+    </div>
+</section>
+  <div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="image" src="../img/vovasimages/vova_image_for_website.jpg" class="d-block" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Володимир Яровий</h5>
+        <p>Зробив header, dinousaur game, our-team section, football, calculator, </p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img class="image" src="../img/vovasimages/kiril.jpg" class="d-block" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Кірілл Каптелій</h5>
+        <p>Зробив footer, calculator time, biggest number, guess the number, check-date, stone-paper-scissors, select the scientist.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+  <section>
+    <div class="container">
+        <h3 class="sts__title">Обери вченого/их</h3>
+        <ul class="sts__list">
+            <li class="sts__item">
+                <div class="sts__item__content sts__content__1">Albert Einshtein <br>
+1879-1955</div>
+            </li>
+            <li class="sts__item">
+                <div class="sts__item__content sts__content__2">Isaac Newton <br> 1643-1727</div>
+            </li>
+            <li class="sts__item">
+                <div class="sts__item__content sts__content__4">Galileo Galilei <br> 1564-1642</div>
+            </li>
+            <li class="sts__item">
+                <div class="sts__item__content sts__content__5">Marie Curie <br> 1867-1934</div>
+            </li>
+            <li class="sts__item">
+                <div class="sts__item__content sts__content__6">Johannes Kepler <br> 1571-1630</div>
+            </li>
+            <li class="sts__item">
+                <div class="sts__item__content sts__content__7">Nicolaus Copernicus <br> 1473-1543</div>
+            </li>
+            <li class="sts__item">
+                <div class="sts__item__content sts__content__8">Max Planck <br> 1858-1947</div>
+            </li>
+            <li class="sts__item">
+                <div class="sts__item__content sts__content__9">Katherine Blodgett <br> 1898-1979</div>
+            </li>
+            <li class="sts__item">
+                <div class="sts__item__content sts__content__10">Ada Lovelace <br> 1815-1852</div>
+            </li>
+            <li class="sts__item">
+                <div class="sts__item__content sts__content__11">Sarah E. Goode <br> 1855-1905</div>
+            </li>
+            <li class="sts__item">
+                <div class="sts__item__content sts__content__12">Lise Meitner <br> 1878-1968</div>
+            </li>
+            <li class="sts__item">
+                <div class="sts__item__content sts__content__13">Hanna Hammarström <br> 1829-1909</div>
+            </li>
+        </ul>
+        <ul class="sts__list__2">
+            <li class="sts__item__2"><button class="sts__button sts__btn__1" type="button">Які вчені народилися в 19 ст.</button>
+            </li>
+            <li class="sts__item__2"><button class="sts__button sts__btn__2" type="button">Відсортувати вчених за алфавітом</button>
+            </li>
+            <li class="sts__item__2"><button class="sts__button sts__btn__3" type="button">Відсортувати вчених за кількістю прожитих
+                    років</button></li>
+            <li class="sts__item__2"><button class="sts__button sts__btn__4" type="button">Знайти вченого, який народився
+                    найпізніше</button></li>
+            <li class="sts__item__2"><button class="sts__button sts__btn__5" type="button">Знайти рік народження Albert
+                    Einshtein</button></li>
+            <li class="sts__item__2"><button class="sts__button sts__btn__6" type="button">Знайти вчених, прізвища яких починаються
+                    на на літеру “С” </button></li>
+            <li class="sts__item__2"><button class="sts__button sts__btn__7" type="button">Видалити всіх вчених, ім’я яких
+                    починається на “А”</button></li>
+            <li class="sts__item__2"><button class="sts__button sts__btn__8" type="button">Знайти вченого, який прожив найдовше і
+                    вченого,
+                    який прожив найменше</button></li>
+            <li class="sts__item__2"><button class="sts__button sts__btn__9" type="button">Знайти вчених, в яких співпадають перші
+                    літери імені і прізвища</button></li>
+        </ul>
+    </div>
+</section>
+  <div class="container__footer">
+    <div class="backdrop">
+  <div class="modalwindow">
+        <button class="closewuindow"><img src="../img/kirillsimgaes/close.svg" alt="close"></button>
+        <h3 class="modal__h">Дякую за підписку!</h3>
+        <img src="../img/kirillsimgaes/icos.svg" alt="icos" class="icos">
+
+    </div>
+    </div>
+  
+    <div><img src="../img/kirillsimgaes/logo.svg" alt="logo"></div>
+    <div>
+        <ul class="footer__list">
+            <li class="footer__item">Тел: <a href="tel:+381234567890" class="footer__link">+38 (123) 456 78 90</a></li>
+            <li class="footer__item">E-Mail: <a href="mailto:codingmagic@gmail.com"
+                    class="footer__link">codingmagic@gmail.com</a></li>
+            <li class="footer__item">Facebook: <a href="#" class="footer__link">CodingMagic</a></li>
+            <li class="footer__item">Twitter: <a href="#" class="footer__link">CodingMagic</a></li>
+            <li class="footer__item">Instagram: <a href="#" class="footer__link">CodingMagic</a></li>
+        </ul>
+    </div>
+    <div><input type="text" placeholder="Ваша ел. адреса..." class="footer__input"> <button
+            class="footer__btn">Підписатись</button>
+        <p class="footer__info">*Підписавшись, Ви зможете ортимувати інформаццію про новинки на сайті</p>
+    </div>
+</div>
+    </div>
+    <!-- Loads the specified .html file -->
+    
+    <script src="kirill.js"></script>
+    <script src="football_script.js"></script>
+    <script src="calculator.js"></script>
+    <script src="dino.js"></script>
+    <script src="modal_welcome.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  </body>
+</html>
